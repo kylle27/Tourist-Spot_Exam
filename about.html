@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOHOL TOURIST SPOT</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">TOURIST SPOTS</h1>
+        <ul class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html"class="active">Contact</a>
+        </ul>
+        <img src="./img/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>EXPLORE THE BEST TOURIST SPOT IN BOHOL</h1>
+            <div class="line"></div>
+            <h2>A BEAUTIFUL PLACE</h2>
+        </div>
+    </header>
+    <!-- ==Tourist spot-->
+    <section class="spot">
+        <div class="title">
+            <h1>BOHOL TOURIST SPOTS</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./img/air1.png" alt="">
+                <h4>Ride a Hot Air Balloon</h4>
+                <p>Most visitors to Bohol make the trek to the viewing deck overlooking Chocolate Hills. Travel insiders, however, know that there are other ways of experiencing the tourist landmark. See the chocolate brown hills from a totally different perspective with a scenic early morning hot-air balloon ride. It’s a cooler experience.</p>
+               
+            </div>
+            <div class="col">
+                <img src="./img/tarsier2.png" alt="">
+                <h4>Tarsiers</h4>
+                <p>Let’s be honest: you want to go to Bohol because you want to see the smallest and cutest primate in the world. In addition to Chocolate Hills, the tarsier is one of Bohol’s biggest draws. The best place to see tarsiers is in their natural habitat, and the Philippine Tarsier and Wildlife Sanctuary is home to many of the adorable tarsiers that you’ll find in the heart of Bohol Island.</p>
+         
+            </div>
+            <div class="col">
+                <img src="./img/alona.png" alt="">
+                <h4>Scuba Diving at Alona Beach</h4>
+                <p>Scuba diving in Bohol’s crystal blue waters is a fun way of experiencing nature. Learn some basic diving skills before you jump into the deep end. Get up close with tropical fish and sea turtles and swim above colorful coral. Explored reefs, wrecks, and caves. A seasoned diving instructor is always at your side.</p>
+           
+            </div>
+            <div class="col">
+                <img src="./img/hopping.png" alt="">
+                <h4>Spot Dolphins</h4>
+                <p>No matter where you are in the Philippines—and Bohol is no exception—you must go island hopping on a private outrigger. Explore exotic islands like Pamilacan, Balicasag, Isola di Francesco, and the crescent-shaped sandbar of Virgin Island. Meet friendly dolphins and go snorkeling in one of the country’s top diving spots.</p>
+             
+            </div>
+            <div class="col">
+                <img src="./img/loboc.png" alt="">
+                <h4>Loboc River</h4>
+                <p>By noon, you would have worked up an appetite and you want to avoid the hot sun. Hop aboard a dining riverboat and savor a hearty buffet of Filipino specialties as you drift through the pristine waters of the Loboc River. Admire the jungle views and soak up the essence of Bohol Island. Part of the experience is a short cultural show staged by the local community.</p>
+            </div>
+            <div class="col">
+                <img src="./img/hills.png" alt="">
+                <h4>Chocolate Hills  </h4>
+                <p>Bohol's claim to fame is unique geological formations of over 1000 cone-shaped hills that change in color depending on the season – the Chocolate Hills. You can view the hills from the Chocolate Hills Complex where there’s a viewing deck with a stunning 360° view of the cone-shaped hills.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        const menubtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menubtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>

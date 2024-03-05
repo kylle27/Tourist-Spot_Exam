@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOHOL TOURIST SPOT</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">TOURIST SPOTS</h1>
+        <ul class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html"class="active">Contact</a>
+        </ul>
+        <img src="./img/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>EXPLORE THE BEST TOURIST SPOT IN BOHOL</h1>
+            <div class="line"></div>
+            <h2>A BEAUTIFUL PLACE</h2>
+        </div>
+    </header>
+    <script>
+        const menubtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menubtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>

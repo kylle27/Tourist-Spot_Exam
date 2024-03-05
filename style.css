@@ -1,0 +1,145 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links a{
+    margin: 0 30px;
+    font-weight: bold;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./img/bohol2.jpg');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+.header-content{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+.header-content h2{
+    font-size: 4vmin;
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.ctn{
+    padding: 8px 15px;
+    background:#fc036b;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: #49497e;
+}
+.row{
+    display: grid;  
+    width: 100%;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 15px;
+   
+}
+.row .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spot .row{
+    margin-top:60px;
+}
+h4{
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+}
+p{
+    color: #7c7c7c;
+    padding: 0px 40px;
+
+}
+.spot .ctn{
+    margin-top: 30px;
+}
+@media only screen and (max-width:850px){
+    .menu-btn{
+        display: block;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #59599e;
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+    .nav-links a{
+        margin: 30px auto;
+        color: whitesmoke;
+    }
+}
+

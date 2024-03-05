@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOHOL TOURIST SPOT</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style1.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">TOURIST SPOTS</h1>
+        <ul class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html"class="active">Contact</a>
+        </ul>
+        <img src="./img/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>EXPLORE THE BEST TOURIST SPOT IN BOHOL</h1>
+            <div class="line"></div>
+            <h2>A BEAUTIFUL PLACE</h2>
+        </div>
+    </header>
+    
+    <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+        <div class="title">
+            <h1>BOHOL TOURIST SPOTS</h1>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img
+                src="img/image1.png"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                src="img/image2.png"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                src="img/image3.png"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                src="img/image4.png"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+                <img
+                  src="img/image5.png"
+                  alt=""
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="img/image6.png"
+                  alt=""
+                />
+              </li>
+          </ul>
+        </div>
+      </section>
+  
+      <ul id="thumbnails" class="thumbnails">
+        <li class="thumbnail">
+          <img src="img/image1.png" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="img/image2.png" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="img/image3.png" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="img/image4.png" alt="" />
+        </li>
+        <li class="thumbnail">
+            <img src="img/image5.png" alt="" />
+          </li>
+          <li class="thumbnail">
+            <img src="img/image6.png" alt="" />
+          </li>
+      </ul>
+  
+      <script>
+        var splide = new Splide("#main-slider", {
+          width: 1000,
+          height: 600,
+          pagination: false,
+          cover: true
+        });
+  
+        var thumbnails = document.getElementsByClassName("thumbnail");
+        var current;
+  
+        for (var i = 0; i < thumbnails.length; i++) {
+          initThumbnail(thumbnails[i], i);
+        }
+  
+        function initThumbnail(thumbnail, index) {
+          thumbnail.addEventListener("click", function () {
+            splide.go(index);
+          });
+        }
+  
+        splide.on("mounted move", function () {
+          var thumbnail = thumbnails[splide.index];
+  
+          if (thumbnail) {
+            if (current) {
+              current.classList.remove("is-active");
+            }
+  
+            thumbnail.classList.add("is-active");
+            current = thumbnail;
+          }
+        });
+  
+        splide.mount();
+      </script>
+   
+</body>
+</html>
